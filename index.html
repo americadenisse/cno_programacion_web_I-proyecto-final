@@ -1,124 +1,301 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///D:/PROGRAMACI%C3%93N%20WEB%20I/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+<html>
+<head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Práctica 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="odls.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<title>Página Principal - Pink UP</title>
 </head>
 <body>
-	<header>
-		<!-- Insertar Encabezado 1: Electrónica -->
-		<h1 style="text-align: center;">Electrónica</h1>
+    <div class="barra">
+        <header>
+            <img class="pinkup" src="logo.png" alt="Pink UP">
+            <nav>
+                <button class="btn"><img src="menu.png" class="icon">Menú</button>
+                <button class="btn"><img src="home.png" class="icon">Inicio</button>
+                <button class="btn"><img src="product.png" class="icon">Productos</button>
+                <button class="btn"><img src="contact.png" class="icon">Contacto</button>
+                <button class="btn"><img src="user.png" class="icon">Mi cuenta</button>
+                <button class="btn"><img src="shopping.png" class="icon">Mi carrito</button>
+            </nav>
+        </header>
+    </div>
+    <div>
+        <header>
+            <h1>Luce un look espectacular con Pink UP</h1>
+            <nav>
+                <table style="text-align: center;">
+                        <tr>
+                        <td><img src="img1.webp"></td>
+                        <td><img src="img2.webp"></td>
+                        <td><img src="img4.webp"></td>
+                        </tr>
+                </table>
+            </nav>
+        </header>
+    </div>
 
-		<!-- Insertar Encabezado 2: Lista de productos -->
-		<h2 style="text-align: center;">Lista de productos</h2>
-	</header>
+        <main class="info">
+            <header>
+            <nav>
+            <table>
+                <tr>
+                    <td><img src="img1.jpg"></td>
+                    <td style="text-align: center;"><a style="color: hotpink; font-family: 'Shadows Into Light'"><h1>Lo que debes saber de nosotros</h1>Pink Up Cosmetics</a> es una línea de cosméticos creada para las mujeres que aman el color, dónde la variedad de cosméticos que conforman estos productos de belleza reflejan el vanguardismo y estilo que nos caracteriza.<br/>Aquí estamos comprometidos en ofrecer una línea de productos de alta calidad cosmética dónde nuestro interés principal es que nuestras clientas se sientan satisfechas gracias a la creación de cosméticos innovadores, en tendencia y siempre accesibles. En Pink Up Cosmetics nos encargamos de crear los mejores cosméticos para aquellas mujeres amantes de la belleza, color y vanguardismo, donde la variedad de nuestros productos refleja la alta calidad, estilo y creatividad que tanto nos caracterizan. Estamos comprometidos en ofrecer una línea de productos de alta calidad, nuestro interés principal es que nuestras clientas se sientan satisfechas creando productos innovadores y en tendencia. Encontramos la mejor opción para embellecer a cada una de las mujeres que buscan verse bien en sus actividades del día al día.</td>
+                </tr>
+            </table>
+            </nav>
+            </header>
+        </main>
 
-	<!-- Insertar una tabla -->
-
-	<!-- Linea continua: solid -->
-	<table style="border: 4px solid; width: 75%; margin:auto;">
-		<thead>
-			<!-- Insertar filas --->
-			<tr style="text-align: left;">	
-				<th>Departamento</th>
-				<th>Código</th>
-				<th>Producto</th>
-				<th>Marca</th>
-				<th>Precio</th>
-				<th>Oferta especial</th>
-			</tr>
-			<tr>	
-				<td>Electrónica</td>
-				<td>129867</td>
-				<td>TV 40"</td>
-				<td>Samsung</td>
-				<td>$ 5699.00</td>
-				<td>12 MSI</td>
-			</tr>
-			<tr>	
-				<td></td>
-				<td>129832</td>
-				<td>TV 60"</td>
-				<td>Samsung</td>
-				<td>$ 14599.00</td>
-				<td>12 MSI</td>
-			</tr>
-			<tr>	
-				<td>Telefonía</td>
-				<td>129358</td>
-				<td>Smarthphone</td>
-				<td>Motorola</td>
-				<td>$ 3697.00</td>
-				<td>13 MSI</td>
-			</tr>
-			<tr>	
-				<td></td>
-				<td>129321</td>
-				<td>Smarthphone</td>
-				<td>Samsung Galaxy</td>
-				<td>$ 6997.00</td>
-				<td>6 MSI</td>
-			</tr>
-			<tr>	
-				<td></td>
-				<td>138756</td>
-				<td>Teléfono inalámbrico</td>
-				<td>Motorola</td>
-				<td>$ 578.00</td>
-				<td>5% pago en efectivo</td>
-			</tr>
-			
-			<tr>	
-				<td>Computación</td>
-				<td>129329</td>
-				<td>Impresora</td>
-				<td>HP Ink Tank 115</td>
-				<td>$ 3176.00</td>
-				<td>12 MSI</td>
-			</tr>
-			<tr>	
-				<td> </td>
-				<td>127231</td>
-				<td>Mesa para laptop</td>
-				<td>Mainstays</td>
-				<td>$ 999.00</td>
-				<td>6 MSI</td>
-			</tr>
-		</thead>
-	</table>
-	
-	<!-- Insertar texto(parráfo): <section><article><p>...</p></article></section> -->
-	<section>
-		<h2>Sólo los mejores productos</h2>
-		<article>
-			<p style="text-align: justify;">
-				Encuentra audífonos, celulares, cámaras, accesorios para celulares, computadoras, tabletas, artículos de oficina, electrónicos de oficina, instrumentos musicales, drones, cámaras de seguridad, televisiones y mucho más.
-				Te ofrecemos solo productos de calidad, las mejores marcas, el mejor servicio, la app más confiable y todas las formas de pago, nuestro objetivo facilitar tu vida con la mejor calidad. 
-				Encuentra todo lo que necesita en el mejor lugar.
-			</p>
-			<p style="text-align: justify;">
-				Te ofrecemos solo productos de calidad, las mejores marcas, el mejor servicio, la app más confiable y todas las formas de pago, nuestro objetivo facilitar tu vida con la mejor calidad. 
-				Encuentra todo lo que necesita en el mejor lugar.
-			</p>
-			<p style="text-align: justify;">
-				Encuentra todo lo que necesita en el mejor lugar.
-			</p>
-		</article>
-	</section>
-
-	<!-- Insertar lista desordenada: <ul>...</ul> -->
-	<h2>Nuestras sucursales</h2>
-	<ul>
-		<li>Centro</li>
-		<li>El Dorado</li>
-		<li>Plaza San Luis</li>
-		<li>Tangamanga</li>
-		<li>Citadella</li>
-		<li>Carranza</li>
-	</ul>
-
-	<!-- Insertar referencia dentro de una cita:  <cite>...</cite> -->
-	<cite>https://super.walmart.com.mx/electronica/cat2910049"</cite>
-
-</body></html>
+    <div class="producto">
+        <center>
+            <h1>Nuestros productos</h1>
+            <table>
+            <tr>
+                <td>
+                <img class="image" src="p1.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p1.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p1.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p1.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p5.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p6.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p7.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p8.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p9.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p10.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p11.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p12.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p13.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p14.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p15.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p16.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p17.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p18.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p19.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p20.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            </table>
+            <table>
+                <h1>Nuestros KITS</h1>
+            <table>
+            <tr>
+                <td>
+                <img class="image" src="p21.webp" alt="p1">
+                <p class="nombre"><b>Kiss Lip Tint - PR BOX</b></p>
+                <p class="infop">Tinta para labios de larga duración e</br>intransferible 24 hrs. Gama con 4 colores intensos</br>y 2 sutiles para dar diferentes efectos:</p><br/>
+                <p class="precio">$420.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p22.webp" alt="p2">
+                <p class="nombre"><b>Liquid Blush - Edición Limitada</b></p>
+                <p class="infop">Textura fluida, ligera y SIN sensación grasosa.</br>Larga duración, ideales para todo tipo de piel.</br>Crea un efecto construíble, de sutíl a intenso</p><br/>
+                <p class="precio">$780.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p23.webp" alt="p3">
+                <p class="nombre"><b>Glitter Up BOX - Edición Limitada</b></p>
+                <p class="infop">Labios de efecto húmedo y destellantes.</br>Con un cómodo aplicador diseñado para</br>una aplicación uniforme.</br>Son 6 tonos diferentes</p>
+                <p class="precio">$100.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p24.webp" alt="p4">
+                <p class="nombre"><b>Lip Oil BOX - Edición Limitada</b></p>
+                <p class="infop">Este kit incluye 6 piezas:</br></br>5 Magic Lip Oil Color activado por</br>el PH natural de tu piel.</p>
+                <p class="precio">$420.00 MXN</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p25.webp" alt="p1">
+                <p class="nombre"><b>Long Lasting Eye Liner - BOX collection</b></p>
+                <p class="infop">Lápices delineadores de larga duración,</br> alto en pigmentación.</br> Resistente al agua de textura extra suave que no irrita la piel y aporta un color intenso.</br> No se corre y es intransferible.</p>
+                <p class="precio">$1120.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p26.webp" alt="p2">
+                <p class="nombre"><b>Kit Corrective Loose Powder</b></p>
+                <p class="infop">Kit con las tres armonías de Corrective Loose Powder,</br> ideales para todo tipo de piel,</br> cada uno con diferentes funciones.</p>
+                <p class="precio">$369.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p27.webp" alt="p3">
+                <p class="nombre"><b>Kit Eye & Brow Beauty</b></p>
+                <p class="infop">¡El kit indicado para crear cejas y</br> presumir una mirada de impacto!</br> Incluye <b>8</b> productos varios:</p>
+                <p class="precio">$656.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p28.webp" alt="p4">
+                <p class="nombre"><b>Kit Glowy Skin</b></p>
+                <p class="infop">¡El mejor kit para un look muy completo y piel deslumbrante!</br> Incluye <b>12</b> productos varios:</p>
+                <p class="precio">$999.00 MXN</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p29.webp" alt="p1">
+                <p class="nombre"><b>Color Collection</b></p>
+                <p class="infop">Kit con 18 lápices delineadores de color.</br> Crea delineados perfectos de larga duración y</br> muy alta pigmentación. </p>
+                <p class="precio">$1180.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p30.webp" alt="p2">
+                <p class="nombre"><b>Pastel Kit</b></p>
+                <p class="infop">¿PinkLover amante de los colores sutiles?</br> Colección con 6 tonos pastel ideales para</br> agregar un toque muy único y especial</br> de color a tu mirada por horas. </p>
+                <p class="precio">$418.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p31.webp" alt="p3">
+                <p class="nombre"><b>Intense Kit</b></p>
+                <p class="infop">¿PinkLover amante del color en su más alta potencia?</br>¡Esenciales para una mirada única y</br> de alto impacto!</br> Kit con los 6 tonos mas vibrantes</p>
+                <p class="precio">$418.00 MXN</p>
+                </td>
+                <td>
+                <img class="image" src="p32.webp" alt="p4">
+                <p class="nombre"><b>Neutral Kit</b></p>
+                <p class="infop">¿PinkLover amante de lo clásico?</br>Intensifica y eleva tu mirada con</br> los 6 tonos más básicos, desde lo más intenso</br> hasta lo mas suave.</p>
+                <p class="precio">$418.00 MXN</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img class="image" src="p33.webp" alt="p1">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p34.webp" alt="p2">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p35.webp" alt="p3">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+                <td>
+                <img class="image" src="p36.webp" alt="p4">
+                <p class="nombre"><b>Producto 1</b></p>
+                <p class="infop">...</p>
+                <p class="precio">$100</p>
+                </td>
+            </tr>
+            </table>
+        </center>
+    </div>
+    <footer class="piepagina"><br/>Página web desarrollada para la materia de CNO I Programación Web I<br/>Primavera 2025 - Universidad Politécnica de San Luis Potosí, S.L.P.</footer>
+</body>
+</html>
