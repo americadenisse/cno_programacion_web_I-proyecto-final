@@ -1,9 +1,9 @@
 body{
 	background-color: pink;
 	/* font-family: "Roboto Condensed", sans-serif; */
-    margin: 0;
-    padding: 0;
-    text-align: center;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 p{
 	font-family: "Roboto Condensed", sans-serif;
@@ -83,6 +83,6 @@ td{
 }
 .image{
 	/* border: 1px solid lightgray; */
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 }
