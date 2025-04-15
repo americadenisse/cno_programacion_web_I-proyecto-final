@@ -69,43 +69,98 @@ td{
 	color: white;
 	height: 60px;
 }
-.producto{
-	background-color: white;
-	margin: 15px;
+.producto {
+  background-color: white;
+  padding: 20px;
+}
+.producto h1{
+      margin-bottom: 20px;
+}
+.productos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.product{
+	width: 260px;
+	background: #fff;
+	padding: 10px;
+	border: 2px solid #eee;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product img{
+	width: 100%;
+	border-radius: 10px;
 }
 .nombre{
-	text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
 }
 .infop{
-	text-align: center;
-	font-size: 15px;
+  font-size: 14px;
+  margin: 5px 0;
 }
 .precio{
-	font-family: "Shadows Into Light", cursive;
-	text-align: center;
-	font-size: 35px;
-	color: #ff009e;
+  font-size: 24px;
+  color: #ff009e;
+  font-family: "Shadows Into Light", cursive;
 }
 .image{
 	/* border: 1px solid lightgray; */
-	width: 300px;
-	height: 300px;
+	width: 190px;
+	height: 250px;
 }
 .galeria{
 	background-color: white;
 }
 img{
 	margin: 6px;
-	border: 4px solid white;
+	border: 4px /*solid white*/;
 }
 .galeria img{
-	border: 4px solid white;
+	/* border: 4px solid white; */
 	width: 400px;
 	height: 400px;
 }
+.social{
+  padding: 20px;
+}
+.social h3{
+  margin-bottom: 10px;
+}
+.social-icons a{
+  text-decoration: none;
+  color: hotpink;
+  margin-right: 15px;
+  font-size: 24px;
+  transition: transform 0.2s, color 0.2s;
+}
+.social-icons a:hover{
+  transform: scale(1.1);
+} 
+.fa-facebook-f:hover{
+  color: #3b5998;
+}
+.fa-instagram:hover{
+  color: #e1306c;
+}
+.fa-tiktok:hover{
+  color: #69C9D0;
+}
+.fa-pinterest-p:hover{
+  color: #bd081c;
+}
+.fa-youtube:hover{
+  color: #ff0000;
+}
+/*
 img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 0.7s ease, border-color 0.5s ease;
   border: 4px solid hotpink;
   margin: 4px;
 }
+/*
