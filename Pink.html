@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="odls.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<title>Factura Pink Up</title>
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ul-1.8.17min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.form_html.js"></script>
+
+	<style>
+		label {
+			display: block;
+			margin-top: 10px;
+		}
+		h2 {
+			font-family: "Shadows Into Light", cursive;
+			color: #ff009e;
+		}
+		.datos {
+			font-family: "Shadows Into Light", cursive;
+			color: #ffffff;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		function generar() {
+			// Obtener los datos del formulario
+			var nombre = document.getElementById("nombre").value;
+			var direccion = document.getElementById("direccion").value;
+			var telefono = document.getElementById("telefono").value;
+
+			// Crear PDF
+			var doc = new jsPDF();
+
+			// Título
+			doc.setFontSize(30);
+			doc.setTextColor(233, 30, 99);
+			doc.text(75, 20, "Pink Up \nFactura");
+
+			// Datos empresa
+			doc.setFontSize(12);
+			doc.setTextColor(0, 0, 0);
+			doc.text(20, 35, "Pink Up Cosmetics");
+			doc.text(20, 40, "RFC: PNK123456789");
+			doc.text(20, 45, "Calle Belleza 100, CDMX");
+			doc.text(20, 50, "Tel: (55) 1234 5678");
+
+			// Datos cliente (ingresados)
+			doc.text(130, 35, "Cliente:");
+			doc.text(130, 40, nombre);
+			doc.text(130, 45, direccion);
+			doc.text(130, 50, "Tel: " + telefono);
+
+			// Tabla productos
+			doc.setDrawColor(0);
+			doc.setFillColor(233, 30, 99);
+			doc.setTextColor(255, 255, 255);
+			doc.rect(20, 60, 170, 10, 'F');
+			doc.text(25, 67, "Producto");
+			doc.text(95, 67, "Cantidad");
+			doc.text(135, 67, "Precio");
+			doc.text(170, 67, "Total");
+
+			doc.setTextColor(0, 0, 0);
+			var startY = 75;
+			var items = [
+				["Labial Rosa", "2", "$150.00", "$300.00"],
+				["Rímel Volumen", "1", "$200.00", "$200.00"],
+				["Base Maquillaje", "1", "$250.00", "$250.00"]
+			];
+
+			items.forEach(function(item, i) {
+				var y = startY + (i * 8);
+				doc.text(25, y, item[0]);
+				doc.text(100, y, item[1]);
+				doc.text(135, y, item[2]);
+				doc.text(175, y, item[3], { align: "right" });
+			});
+
+			// Total
+			doc.setFontSize(12);
+			doc.text(135, startY + 30, "Total:");
+			doc.text(175, startY + 30, "$750.00", { align: "right" });
+
+			// Mensaje final
+			doc.setFontSize(10);
+			doc.text(20, startY + 45, "¡Gracias por tu compra en Pink Up!");
+
+			// Mostrar PDF en iframe
+			var string = doc.output('datauristring');
+			$('iframe').attr('src', string);
+		}
+	</script>
+</head>
+
+<body>
+	<h2>Datos del Cliente</h2>
+	<label class="datos">Nombre:
+		<input type="text" id="nombre" placeholder="Escribe tu nombre">
+	</label>
+	<label class="datos">Dirección:
+		<input type="text" id="direccion" placeholder="Escribe tu dirección">
+	</label>
+	<label class="datos">Teléfono:
+		<input type="text" id="telefono" placeholder="Escribe tu teléfono">
+	</label>
+
+	<br><br>
+	<input type="button" onclick="generar()" value="Generar Factura"/> <br/><br/>
+	<iframe frameborder="0" width="500" height="600"></iframe>
+</body>
+</html>
