@@ -1,174 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="odls.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Blog - Pink Up Cosmetics</title>
-    <style>
-        body {
-            font-family: 'Roboto Condensed', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h3 {
-            font-family: 'Shadows Into Light', cursive;
-            color: #ff009e;
-        }
-        h2, h3{
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .faq {
-            margin-bottom: 20px;
-        }
-        .comment-section {
-            margin-top: 40px;
-        }
-        .comment-section h3 {
-            margin-bottom: 10px;
-        }
-        .comment-section form {
-            display: flex;
-            flex-direction: column;
-        }
-        .comment-section input, .comment-section textarea {
-            resize: vertical;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .comment-section button {
-            padding: 10px;
-            background-color: #ff009e;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .comment-section button:hover {
-            background-color: #c2185b;
-        }
-        .comments-display {
-            margin-top: 20px;
-        }
-        .comment {
-            background-color: #fce4ec;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Pink Up Cosmetics</title>
+  <link rel="icon" type="image/png" href="odls.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Shadows Into Light', cursive;
+      background-color: #fff0f5;
+    }
+    p{
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    h1{
+        font-family: 'Shadows Into Light', cursive;
+        color: hotpink;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo-container {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .logo-container img {
+      max-height: 80px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #f9f9f9;
+      padding: 10px 0;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #555;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    .nav-item img {
+      width: 30px;
+      height: 30px;
+      transition: filter 0.3s ease;
+    }
+    .nav-item span {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .nav-item:hover span {
+      color: #ff009e;
+    }
+    .nav-item:hover img {
+      filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(3055%) hue-rotate(312deg) brightness(101%) contrast(101%);
+    }
+    .content {
+      padding: 200px 20px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    details {
+      margin-bottom: 15px;
+      border: 1px solid #ffb6d9;
+      border-radius: 6px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    summary {
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    .comment-section input,
+    .comment-section textarea,
+    .comment-section button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: 'Shadows Into Light', cursive;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .comment-section button {
+      background-color: #ff009e;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .comment {
+      background-color: #fce4ec;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Blog de Preguntas y Respuestas - Pink Up Cosmetics</h1>
-        <h2>Bienvenido a la Sección de Ayuda</h2>
-        <p>En esta sección, encontrarás respuestas a las preguntas más frecuentes sobre Pink Up Cosmetics. Si tienes alguna duda adicional, no dudes en utilizar nuestro chatbot para obtener asistencia inmediata.</p>
 
-        <div class="faq">
-            <h3>1. ¿Qué es Pink Up Cosmetics?</h3>
-            <p>Pink Up Cosmetics es una marca de maquillaje dedicada a ofrecer productos de alta calidad y accesibles para todas. Nuestro objetivo es realzar la belleza natural de cada persona.</p>
-        </div>
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Pink Up" />
+  </div>
+  <nav>
+    <a href="#galeria" class="nav-item">
+      <img src="menu.png" alt="Menú" />
+      <span>Menú</span>
+    </a>
+    <a href="index.html" class="nav-item">
+      <img src="home.png" alt="Inicio" />
+      <span>Inicio</span>
+    </a>
+    <a href="#productos" class="nav-item">
+      <img src="product.png" alt="Productos" />
+      <span>Productos</span>
+    </a>
+    <a href="#contacto" class="nav-item">
+      <img src="contact.png" alt="Contacto" />
+      <span>Contacto</span>
+    </a>
+    <a href="index.html" class="nav-item">
+      <img src="user.png" alt="Mi cuenta" />
+      <span>Mi cuenta</span>
+    </a>
+    <a href="factura.html" class="nav-item">
+      <img src="shopping.png" alt="Mi carrito" />
+      <span>Mi carrito</span>
+    </a>
+    <a href="blog.html" class="nav-item">
+      <img src="help.png" alt="Preguntas frecuentes" />
+      <span>Preguntas frecuentes</span>
+    </a>
+  </nav>
+</header>
 
-        <div class="faq">
-            <h3>2. ¿Cómo puedo registrarme en Pink Up Cosmetics?</h3>
-            <p>Para registrarte, sigue estos pasos:</p>
-            <ol>
-                <li>Visita nuestra página de registro.</li>
-                <li>Completa el formulario con tus datos personales.</li>
-                <li>Confirma tu correo electrónico.</li>
-            </ol>
-        </div>
+<div class="content">
+  <h1>Preguntas frecuentes</h1></br>
+  
+  <details>
+    <summary>¿Cómo puedo comprar en línea?</summary>
+    <p>1. Agrega productos al carrito.<br>2. Finaliza compra e inicia sesión.<br>3. Llena detalles de pago.<br>4. Selecciona método de pago.<br>5. ¡Listo!</p>
+  </details>
 
-        <div class="faq">
-            <h3>3. ¿Cómo puedo utilizar el chatbot?</h3>
-            <p>Nuestro chatbot está disponible en la sección de Ayuda. Para utilizarlo:</p>
-            <ol>
-                <li>Haz clic en el icono del chatbot en la esquina inferior derecha.</li>
-                <li>Escribe tu pregunta o selecciona una de las opciones predefinidas.</li>
-                <li>Recibirás una respuesta inmediata.</li>
-            </ol>
-        </div>
+  <details>
+    <summary>¿Manejan venta al mayoreo?</summary>
+    <p>Sí, tenemos modelo de distribuciones. Escríbenos para unirte.</p>
+  </details>
 
-        <div class="faq">
-            <h3>4. ¿Qué hago si tengo problemas técnicos?</h3>
-            <p>Si experimentas problemas técnicos, puedes:</p>
-            <ol>
-                <li>Revisar nuestra sección de solución de problemas.</li>
-                <li>Contactar a nuestro equipo de soporte a través del chatbot o enviar un correo a [correo de soporte].</li>
-            </ol>
-        </div>
+  <details>
+    <summary>¿Dónde están ubicadas las tiendas?</summary>
+    <p>No tenemos tiendas propias, pero vendemos en distribuidoras de México.</p>
+  </details>
 
-        <div class="faq">
-            <h3>5. ¿Cómo puedo enviar feedback?</h3>
-            <p>Tu opinión es muy importante para nosotros. Puedes enviar feedback a través del formulario de contacto en la sección de Ayuda o directamente a nuestro correo electrónico <a>soporte@fashiongroup.com.mx</a>.</p>
-        </div>
+  <details>
+    <summary>¿Hacen pruebas en animales?</summary>
+    <p>No. Estamos comprometidos con el bienestar animal.</p>
+  </details>
 
-        <div class="comment-section">
-            <h3>Deja tu comentario</h3>
-            <form id="commentForm">
-                <input type="text" id="name" placeholder="Tu nombre" required>
-                <textarea name="comment" id="comment" rows="5" placeholder="Escribe tu comentario aquí..." required></textarea>
-                <button type="button" onclick="saveComment()">Enviar</button>
-            </form>
-        </div>
+  <details>
+    <summary>¿Por qué recomendamos nuestros productos?</summary>
+    <p>Ofrecen calidad, vitaminas y beneficios para tu piel.</p>
+  </details>
 
-        <div class="comments-display" id="commentsDisplay">
-            <h3>Comentarios</h3>
-            <!-- Los comentarios se mostrarán aquí -->
-        </div>
-    </div>
+  <div class="comment-section">
+    <h2>Deja tu comentario</h2>
+    <input type="text" id="name" placeholder="Tu nombre" required />
+    <textarea id="comment" rows="4" placeholder="Escribe tu comentario..." required></textarea>
+    <button onclick="saveComment()">Enviar</button>
+  </div>
 
-    <!-- Integración del chatbot de Landbot -->
-    <script>
-        window.landbot = new Landbot.Livechat({
-            configUrl: 'https://storage.googleapis.com/landbot.online/v3/index.html?your_landbot_id'
-        });
+  <div class="comments-display" id="commentsDisplay">
+    <h3>Tu comentario nos ayuda a mejorar nuestros productos, dejanos el tuyo, tu opinión es importante para nosotros</h3>
+    <h2>Comentarios</h2>
+  </div>
+</div>
 
-        // Función para guardar comentarios en localStorage
-        function saveComment() {
-            const name = document.getElementById('name').value;
-            const comment = document.getElementById('comment').value;
-            if (name && comment) {
-                let comments = JSON.parse(localStorage.getItem('comments')) || [];
-                comments.push({ name, comment });
-                localStorage.setItem('comments', JSON.stringify(comments));
-                displayComments();
-                document.getElementById('commentForm').reset();
-            }
-        }
+<script>
+  function saveComment() {
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    if (name && comment) {
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.push({ name, comment });
+      localStorage.setItem('comments', JSON.stringify(comments));
+      displayComments();
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    }
+  }
 
-        // Función para mostrar comentarios desde localStorage
-        function displayComments() {
-            const commentsDisplay = document.getElementById('commentsDisplay');
-            commentsDisplay.innerHTML = '<h3>Comentarios</h3>';
-            let comments = JSON.parse(localStorage.getItem('comments')) || [];
-            comments.forEach(({ name, comment }) => {
-                let commentDiv = document.createElement('div');
-                commentDiv.className = 'comment';
-                commentDiv.innerHTML = `<strong>${name}</strong>: <p>${comment}</p>`;
-                commentsDisplay.appendChild(commentDiv);
-            });
-        }
+  function displayComments() {
+    const commentsDisplay = document.getElementById('commentsDisplay');
+    commentsDisplay.innerHTML = '<h2>Comentarios</h2>';
+    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+    comments.forEach(({ name, comment }) => {
+      let div = document.createElement('div');
+      div.className = 'comment';
+      div.innerHTML = `<strong>${name}</strong>: <p>${comment}</p>`;
+      commentsDisplay.appendChild(div);
+    });
+  }
 
-        // Mostrar comentarios al cargar la página
-        window.onload = displayComments;
-    </script>
+  window.onload = displayComments;
+</script>
+
 </body>
 </html>
