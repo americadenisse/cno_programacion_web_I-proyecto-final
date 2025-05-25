@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Pink Up</title>
+  <link rel="icon" type="image/png" href="odls.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Shadows Into Light', cursive;
+    }
+    body {
+      background-color: #fff0f5;
+      padding-top: 140px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .logo-container {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .logo-container img {
+      height: 70px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #f9f9f9;
+      padding: 10px 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      transition: color 0.3s ease;
+      width: 60px;
+      user-select: none;
+    }
+    .nav-item img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 4px;
+      transition: filter 0.3s ease;
+    }
+    .nav-item:hover {
+      color: #ff009e;
+    }
+    .nav-item:hover img {
+      filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(3055%) hue-rotate(312deg) brightness(101%) contrast(101%);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 70px;
+    }
+
+    .col {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(255, 0, 158, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #ff009e;
+      font-weight: bold;
+      font-size: 26px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #ff009e;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #ff009e;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #cc007a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Pink Up Cosmetics" />
+    </div>
+    <nav>
+      <a href="#galeria" class="nav-item"><img src="menu.png" alt="Menú" /><span>Menú</span></a>
+      <a href="index.html" class="nav-item"><img src="home.png" alt="Inicio" /><span>Inicio</span></a>
+      <a href="#productos" class="nav-item"><img src="product.png" alt="Productos" /><span>Productos</span></a>
+      <a href="#contacto" class="nav-item"><img src="contact.png" alt="Contacto" /><span>Contacto</span></a>
+      <a href="contacto.html" class="nav-item"><img src="user.png" alt="Mi cuenta" /><span>Mi cuenta</span></a>
+      <a href="factura.html" class="nav-item"><img src="shopping.png" alt="Mi carrito" /><span>Mi carrito</span></a>
+      <a href="blog.html" class="nav-item"><img src="help.png" alt="Preguntas frecuentes" /><span>Preguntas frecuentes</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="col">
+      <h2>Formulario de Contacto</h2>
+      <form action="mailto:contacto@pinkup.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <input type="submit" value="Enviar mensaje" onclick="alert('Tu contacto se ha enviado exitosamente!');" />
+      </form>
+    </div>
+  </main>
+</body>
+</html>
